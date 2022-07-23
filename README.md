@@ -4,7 +4,7 @@ Proof of Liabilities (PoL) is an idea initially described by Greg Maxwell.
 
 
 ### Run
-Run the following commands in the root direction
+Run the following commands in the root dir
 1. `npm install`
 2. `npm run build`
 3. `npm start`
