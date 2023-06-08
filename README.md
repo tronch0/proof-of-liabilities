@@ -22,10 +22,5 @@ Run the following commands in the root dir
 
 ## References
 For more information about the Proof-of-Liabilities protocol, see the following resources:
-- ([Proving Bitcoin Reserves](https://web.archive.org/web/20170114112433/https://iwilcox.me.uk/2014/proving-bitcoin-reserves)) by Zak Wilcox
-- ([Nic Carter's PoR website](https://web.archive.org/web/20170114112433/https://iwilcox.me.uk/2014/proving-bitcoin-reserves))
-
-Proof of Liabilities (PoL) is an idea initially described by Greg Maxwell.
-([source]([https://web.archive.org/web/20170114112433/https://iwilcox.me.uk/2014/proving-bitcoin-reserves](https://niccarter.info/proof-of-reserves/)))
-
-
+- [Proving Bitcoin Reserves](https://web.archive.org/web/20170114112433/https://iwilcox.me.uk/2014/proving-bitcoin-reserves) by Zak Wilcox
+- [Nic Carter's PoR website](https://web.archive.org/web/20170114112433/https://iwilcox.me.uk/2014/proving-bitcoin-reserves)
