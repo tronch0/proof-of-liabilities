@@ -57,20 +57,30 @@
 
 
                 <div class="row">
-                  <h1 class="display-6 offset-md-1">How does it work?</h1>
+                  <h1 class="display-6 offset-md-1">How Does It Work?</h1>
                 </div>
 
                 <div class="row">
                   <div class="col-md-9 offset-md-1">
                     <ol>
-                      <li class="mt-2"><strong>Build users data set</strong> - for each user we'll compute his
-                        commitment as follow \(sha256(Id_{user} | balance_{user}) = commitment_{user}\).</li>
-                      <li class="mt-2"><strong>Build a liability tree</strong> - based on the users' data set we'll
-                        build a summation merkle tree.</li>
-                      <li class="mt-2"><strong>The total liability</strong> - will be at the root of the tree. All leafs
-                        will be sums up to the root. </li>
-                      <li class="mt-2"><strong>Each user can verify</strong> that his liability were taken into account
-                        by verify the path from his commitment at the leaf to the published root by the Provider.</li>
+                      <!-- <li class="mt-2"><strong>Build users data set</strong> - for each user we'll compute his
+                        commitment as follow \(sha256(Id_{user} | balance_{user}) = commitment_{user}\).</li> -->
+
+                      <li class="mt-2"><strong>Constructing the User Data Set:</strong> For each user, we calculate a unique commitment using the formula \(sha256(Id_{user} | balance_{user}) = commitment_{user}\).</li>
+
+                      <!-- <li class="mt-2"><strong>Build a liability tree</strong> - based on the users' data set we'll
+                        build a summation merkle tree.</li> -->
+                      <li class="mt-2"><strong>Building the Liability Tree:</strong> Utilizing the user data set, we construct a summation Merkle tree.</li>
+                      <!-- <li class="mt-2"><strong>The total liability</strong> - will be at the root of the tree. All leafs
+                        will be sums up to the root. </li> -->
+
+                      <li class="mt-2"><strong>Determining Total Liability:</strong> The root of the tree represents the total liability, which is the sum of all leaf nodes.</li>
+
+                      <!-- <li class="mt-2"><strong>Each user can verify</strong> that his liability were taken into account
+                        by verify the path from his commitment at the leaf to the published root by the Provider.</li> -->
+
+                        <li class="mt-2"><strong>User Verification:</strong> Each user can confirm that their liability has been accounted for by verifying the path from their commitment at the leaf node to the published root provided by the organization.</li>
+
                     </ol>
                   </div>
                 </div>
@@ -150,34 +160,34 @@
               <div class="tab-pane fade" id="nav-verify" role="tabpanel" aria-labelledby="nav-verify-tab">
 
                 <div class="row justify-content-center">
-                  <h1 class="display-5 text-center">How to verify the audit?</h1>
+                  <h1 class="display-5 text-center">Verification Process</h1>
                 </div>
 
                 <div class="row ">
-                  <h4 class="display-6 offset-md-1"><u>Prover side</u></h4>
+                  <h4 class="display-6 offset-md-1"><u>Prover's Responsibilities</u></h4>
                 </div>
 
                 <div class="row offset-md-1">
-                  <h5 class="display-7">Publish 3 things <i class="bi bi-broadcast-pin"></i></h5>
+                  <h5 class="display-7">The Prover Must Publish Three Key Elements  <i class="bi bi-broadcast-pin"></i></h5>
                 </div>
 
                 <div class="row offset-sm-1" style="padding-left: 30px;">
                   <ul>
-                    <li>The merkle tree root (commitment + total liability)</li>
-                    <li>A ZKP proof for the correctness of the tree</li>
-                    <li>Send each user its own authentication path</li>
+                    <li>The Merkle tree root (commitment + total liability)</li>
+                    <li>A Zero-Knowledge Proof (ZKP) confirming the tree's correctness</li>
+                    <li>The authentication path for each user</li>
                   </ul>
                 </div>
 
                 <div class="row offset-md-1">
                   <p>In our case the root node value is <kbd
                       id="published-root-text">0eacb4896fa4a123c71dc111b96ff6d00ad654e5943075a250ec11ec50d40aac</kbd><br>
-                    And the proof is <kbd>&#960</kbd></p>
+                      The proof is denoted as <kbd>&#960</kbd></p>
                 </div>
 
                 <div class="row">
                   <div class="col-md-5 offset-md-1">
-                    <h4 class="display-6"><u>Verifer side</u></h4>
+                    <h4 class="display-6"><u>Verifier's Responsibilities</u></h4>
                   </div>
 
                   <div class="col-md-2 offset-md-1 d-flex align-items-center">
@@ -187,7 +197,7 @@
                 </div>
 
                 <div class="row offset-md-1">
-                  <h5 class="display-7">Compute its own commitment <i class="bi bi-pen"></i></h5>
+                  <h5 class="display-7">Calculate Personal Commitment <i class="bi bi-pen"></i></h5>
                 </div>
 
                 <div class="row offset-md-1 mt-3" id="verify-commitment-compution">
@@ -196,12 +206,11 @@
                 </div>
 
                 <div class="row offset-md-1 mt-5">
-                  <h5 class="display-7">Verifer checks if he have a path to the root node <i class="bi bi-search"></i>
+                  <h5 class="display-7">Verify the Path to the Root Node <i class="bi bi-search"></i>
                   </h5>
                 </div>
                 <div class="row offset-md-1">
-                  <p>The prover provides each user an authentication path from his commitment to the liability tree's
-                    root, which is the proof for including the verifier's liability within the total sum.</p>
+                  <p>The prover supplies each user with an authentication path from their commitment to the root of the liability tree. This serves as proof that the verifier's liability is included in the total sum.</p>
                 </div>
 
                 <div class="row offset-md-1">

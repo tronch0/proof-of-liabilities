@@ -227,12 +227,12 @@ function computeCommitmentAndPopulate(userId) {
     const externalVerifyDiv = document.createElement("div");
     externalVerifyDiv.classList.add("col-md-3");
 
-    const verifyBtn = document.createElement("button");
-    verifyBtn.classList.add("btn");
-    verifyBtn.classList.add("btn-info");
-    verifyBtn.textContent = "Verify externally";
-    verifyBtn.onclick = function() {VerifyCommitmentExternally(userId,amount)};
-    externalVerifyDiv.append(verifyBtn);
+    // const verifyBtn = document.createElement("button");
+    // verifyBtn.classList.add("btn");
+    // verifyBtn.classList.add("btn-info");
+    // verifyBtn.textContent = "Verify externally";
+    // verifyBtn.onclick = function() {VerifyCommitmentExternally(userId,amount)};
+    // externalVerifyDiv.append(verifyBtn);
     rowDiv.append(formulaDiv);
     rowDiv.append(externalVerifyDiv);
 
